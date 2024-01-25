@@ -8,7 +8,7 @@ from functools import partial
 from ..utils import rank0_print
 
 class CondenseRotaryEmbedding(torch.nn.Module):
-    def __init__(self, dim, ratio, max_position_embeddings=2048, base=10000, device=None):
+    def __init__(self, dim, ratio, max_position_embeddings=4096, base=10000, device=None):
         super().__init__()
         inv_freq = 1.0 / (base ** (torch.arange(0, dim, 2).float().to(device) / dim))
         self.register_buffer("inv_freq", inv_freq)
