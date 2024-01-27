@@ -5,7 +5,7 @@ from longchat.train.monkey_patch.llama_condense_monkey_patch import replace_llam
 
 replace_llama_with_condense(ratio=8)
 
-from longchat.train.monkey_patch.llama_xformer_attn_monkey_patch import replace_llama_attn_with_xformer
+from longchat.train.monkey_patch.llama_xformer_monkey_patch import replace_llama_attn_with_xformer
 
 replace_llama_attn_with_xformer()
 
